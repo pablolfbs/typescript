@@ -16,10 +16,37 @@ var Carro = /** @class */ (function () {
     };
     return Carro;
 }());
-var carroA = new Carro('Sentra', 4);
-carroA.acelerar();
-console.log(carroA);
-carroA.acelerar();
-console.log(carroA);
-carroA.parar();
-console.log(carroA);
+var Consecionaria = /** @class */ (function () {
+    function Consecionaria(endereco) {
+        this.endereco = endereco;
+    }
+    Consecionaria.prototype.fornecerEndereco = function () {
+        return this.endereco;
+    };
+    Consecionaria.prototype.mostrarListaDeCarros = function () {
+        return this.listaDeCarros;
+    };
+    return Consecionaria;
+}());
+var Pessoa = /** @class */ (function () {
+    function Pessoa(nome, carroPreferido) {
+        this.nome = nome;
+        this.carroPreferido = carroPreferido;
+    }
+    Pessoa.prototype.dizerNome = function () {
+        return this.nome;
+    };
+    Pessoa.prototype.dizerCarroPreferido = function () {
+        return this.carroPreferido;
+    };
+    Pessoa.prototype.comprarCarro = function (carro) {
+        this.carro = carro;
+    };
+    Pessoa.prototype.dizerCarroQueTem = function () {
+        return this.carro;
+    };
+    return Pessoa;
+}());
+var carroA = new Carro('dodge journey', 4);
+var carroB = new Carro('veloster', 3);
+var carroC = new Carro('cerato', 4);
